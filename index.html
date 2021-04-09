@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Focus is about saying no</title>
+	<meta name='description' content='WebSphere, JBOSS, ITIL, Application specialist, Software Engineer'/>
+	<meta name='keywords' content='blogging, seo, tips, tools, apps, office, soa, portal, jboss, oracle, db2, mysql, mssql, c++, java, xml, html, itil, unix, linux, aix, photoshop, xp, scrum'/>	
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+	<script type="text/javascript" src="./fancybox/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="./fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
+	<script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+
+
+<script type="text/javascript">
+		$(document).ready(function() {
+
+		$("a#pic1").fancybox({
+			'titleShow'		: true
+		});
+
+	});
+	</script>
+	
+		<script type="text/javascript">
+		$(document).ready(function() {
+
+		$("a#pic2").fancybox({
+			'titleShow'		: true
+		});
+
+	});
+	</script>
+	
+		<script type="text/javascript">
+		$(document).ready(function() {
+
+		$("a#pic3").fancybox({
+			'titleShow'		: true
+		});
+
+	});
+	</script>
+	
+		<script type="text/javascript">
+		$(document).ready(function() {
+
+		$("a#pic4").fancybox({
+			'titleShow'		: true
+		});
+
+	});
+	</script>
+	
+		<script type="text/javascript">
+		$(document).ready(function() {
+
+		$("a#pic5").fancybox({
+			'titleShow'		: true
+		});
+
+	});
+	</script>
+			
+		<script type="text/javascript">
+		$(document).ready(function() {
+
+		$("a#pic6").fancybox({
+			'titleShow'		: true
+		});
+
+	});
+	</script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//if submit button is clicked
+	$('#submit').click(function () {		
+		
+		//Get the data from all the fields
+		var name = $('input[name=name]');
+		var email = $('input[name=email]');
+		var message = $('textarea[name=message]');
+
+		//Simple validation to make sure user entered something
+		//If error found, add hightlight class to the text field
+		if (name.val()=='') {
+			name.addClass('hightlight');
+			return false;
+		} else name.removeClass('hightlight');
+		
+		if (email.val()=='') {
+			email.addClass('hightlight');
+			return false;
+		} else email.removeClass('hightlight');
+		
+		if (message.val()=='') {
+			message.addClass('hightlight');
+			return false;
+		} else message.removeClass('hightlight');
+		
+		//organize the data properly
+		var data = 'name=' + name.val() + '&' + 'email=' + email.val() + '&' + 'message='  + encodeURIComponent(message.val());
+		
+		//disabled all the text fields
+		$('.text').attr('disabled','true');
+		
+		//show the loading sign
+		$('.loading').show();
+		
+		//start the ajax
+		$.ajax({
+			//this is the php file that processes the data and send mail
+			url: "sendmail.php",	
+			
+			//GET method is used
+			type: "GET",
+
+			//pass the data			
+			data: data,		
+			
+			//Do not cache the page
+			cache: false,
+			
+			//success
+			success: function (html) {				
+				//if sendmail.php returned 1/true (send mail success)
+				if (html==1) {					
+					//hide the form
+					$('.form').fadeOut('slow');					
+					
+					//show the success message
+					$('.done').fadeIn('slow');
+					
+				//if process.php returned 0/false (send mail failed)
+				} else alert('Sorry, there was an error, please try again later.');				
+			}		
+		});
+		
+		//cancel the submit button default behaviours
+		return false;
+	});	
+});	
+</script>	
+	
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-701187-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="preloader" style="display: none;">
+	<img src="./images/kisti-1_thumb_colored.jpg" width="0" height="0" />
+	<img src="./images/kisti-2_thumb_colored.jpg" width="0" height="0" />
+	<img src="./images/kisti-3_thumb_colored.jpg" width="0" height="0" />
+	<img src="./images/kisti-4_thumb_colored.jpg" width="0" height="0" />
+	<img src="./images/kisti-5_thumb_colored.jpg" width="0" height="0" />
+	<img src="./images/kisti-6_thumb_colored.jpg" width="0" height="0" />
+</div>
+<div class="wrapper">
+	<div class="box">
+		<center><img src="./images/ik.png" /></center><br />
+	<div class="content">
+        	<div class="left">
+        		<h1>hi there, I'm <font style="color:orange">István Kis</font></h1>
+				<h3>IT professional</h3><br />
+        			<br /><br />I am a <b style="color: orange">computer engineer</b> graduated from <a href="http://www.bme.hu/">BUTE</a>, also a blogger since 2003, podcaster since 2020, and founder editor of <a href="http://grundaktiv.hu/">Grundaktiv</a>.
+					Previously I worked as a <b style="color: orange">freelance developer</b> and <b style="color: orange">designer</b>.<br /><br />
+					
+					Since 2009, I have been working for IT division of Intesa Sanpaolo's <a href="http://www.cib.hu/">subsidiary</a> in many roles (system engineer, head of operation, head of system analysis), currently as <b style="color: orange">Head of DevOps Engineering</b>, leading 7 IT experts. Every work related experience is summarized on <a href="http://linkedin.com/in/istvankis">my Linkedin</a> page.<br /><br />
+					I am a big fan of online education, such as Coursera and Udemy. <b style="color: orange">My hobbies</b> are travelling, running, bicycle, playing soccer, chess, watching movies, trips, theater. I also learn a lot about ethical hacking, which is quite a big love from my childhood. I spend most of my free time with my girlfriend, friends and family.<br /><br />
+					If you are interested in it, you can check my podcast called <a href="http://kultursufni.hu/">kultúr sufni</a>, or my <a href="http://blog.istvankis.net/">personal blog</a> also. Both are Hungarian.<br /><br />
+					
+
+<br />
+<br /><h2>Feel free to contact me</h2><br />
+
+<b style="color: orange">istvan.kis AT gmail DOT com</b><br /> <br />
+<br />
+
+        			<a href="http://linkedin.com/in/istvankis" target="_blank"><img alt="Linkedin" src="images/linkedin.png"  class="small_icon" /></a>
+        			<a href="http://flickr.com/photos/b3ck" target="_blank"><img alt="Flickr" src="images/flickr.png" class="small_icon" /></a>
+        			<a href="http://facebook.com/istvankis" target="_blank"><img alt="Facebook" src="images/facebook.png" class="small_icon" /></a>
+        			<a href="http://twitter.com/b3ck" target="_blank"><img alt="Twitter" src="images/twitter.png"  class="small_icon" /></a><br /><br />
+
+				
+
+		<div class="clear"></div>		
+			</div>
+            <div class="right">
+
+
+          		<h2>i usually just do stuff</h2><br />
+
+          		<a id="pic1" href="images/kisti-1.jpg"><img style="width:50px;height:160px;" alt="Friends, Monte Carlo, Monaco" border="1" src="images/spacer.gif" /></a>
+          		<a id="pic2" href="images/kisti-2.jpg"><img style="width:50px;height:160px;" alt="Trip with my girlfriend to Pilisszentlélek, Hungary" border="1" src="images/spacer.gif" /></a>
+          		<a id="pic3" href="images/kisti-3.jpg"><img style="width:50px;height:160px;" alt="Jeju, South Korea" border="1" src="images/spacer.gif" /></a>
+          		<a id="pic4" href="images/kisti-4.jpg"><img style="width:50px;height:160px;" alt="Blue Lagoon, Reykjavík, Iceland" border="1" src="images/spacer.gif" /></a>
+          		<a id="pic5" href="images/kisti-5.jpg"><img style="width:50px;height:160px;" alt="Halloween, Vép, Hungary" border="1" src="images/spacer.gif" /></a>
+				<a id="pic6" href="images/kisti-6.jpg"><img style="width:50px;height:160px;" alt="Bike tour with friends, Rossatz-Arnsdorf, Austria" border="1" src="images/spacer.gif" /></a>
+				<br /><br />
+          		<h2>skills in keywords</h2>
+				<ul>
+					<li>C, Java, PHP, Python, shell scripting</li>
+					<li>xSQL, DB2, Oracle, MySQL, MSSQL</li>
+					<li>IBM WAS, IBM WPS, RedHat JBoss EAP</li>
+					<li>*NIX, Unix, Linux, AIX admin.</li>
+					<li>Agile software developing (Scrum, XP)</li>
+					<li>ITIL v3</li>
+					<li>Team building and management</li>
+					<li>Contract negotiation and vendor mgmt.</li>
+					<li>Business analysis</li>
+					<li>Architecture planning</li>
+					<li>IT operations, high availability</li>
+					<li>Cybersecurity and ethical hacking</li>
+				</ul>
+		
+			</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
